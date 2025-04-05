@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./font_4743112_ue8uod68d9d/iconfont.css">
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    ul,li{
+      list-style: none; 
+    }
+    html{
+      background-color: black;
+    }
+    /* 大体框架 */
+    .mian{
+      margin: 0 auto;
+      width: 400px;
+      height: 800px;
+      background-color: whitesmoke;
+    }
+    .head{
+      display: flex;
+      justify-content: space-between;
+      width: 400px;
+      height: 50px;
+      background-color: white;
+    }
+    .body{
+      overflow: hidden;
+      width: 400px;
+      height: 700px;
+    }
+   .foot{
+      display: flex;
+      justify-content: space-between;
+      width: 400px;
+      height: 50px;
+      background-color: white;
+    }
+    /* 头部详细 */
+    .logo{
+      text-align: center;
+      line-height: 50px;
+      width: 100px;
+      height: 50px;
+      background-color: white;
+    }
+   .add{
+      text-align: center;
+      line-height: 50px;
+      width: 50px;
+      height: 50px;
+      background-color: white;
+      font-size: 40px;
+   }
+   /* 底部详细 */
+   .naozhong{
+      text-align: center;
+      line-height: 50px;
+      width: 100px;
+      height: 50px;
+      background-color: white;
+    }
+   .miaobiao{
+      text-align: center;
+      line-height: 50px;
+      width: 100px;
+      height: 50px;
+      background-color: white;
+   }
+  .dingshi{
+      text-align: center;
+      line-height: 50px;
+      width: 100px;
+      height: 50px;
+      background-color: white;
+    }
+    /* 中间详细 */
+    .item{
+      margin: 0 auto;
+      margin-top: 10px;
+      padding-top: 30px;
+      width: 380px;
+      height: 100px;
+      background-color: skyblue;
+      border-radius: 10px;
+    }
+    /* 中间层详情 */
+    .center{
+      display: flex;
+      justify-content: space-around;
+      line-height: 50px;
+    }
+    .time{
+      font-size: 40px;
+    }
+    .iconfont{
+      color: blue;
+      font-size: 20px;
+    }
+    /* 下标详情 */
+    .xiabiao{
+      margin-top: 10px;
+      display: flex;
+      font-size: 20px;
+    }
+   .name{
+      margin-left: 20px;
+      margin-right: 50px;
+    }
+    /* 设置闹钟时间 */
+    /* 停留效果 */
+    .add:hover{
+      background-color: whitesmoke;
+      cursor: pointer;
+    }
+    .naozhong:hover{
+      background-color: whitesmoke;
+      cursor: pointer;
+    }
+    .miaobiao:hover{
+      background-color: whitesmoke;
+      cursor: pointer;
+    }
+    .dingshi:hover{
+      background-color: whitesmoke;
+      cursor: pointer;
+    }
+    .item:hover{
+      background-color: steelblue;
+      cursor: pointer;
+    }
+    .xuanzhe span:hover{
+      background-color: gray; 
+      cursor: pointer; 
+    }
+    /* 新增模态框样式 */
+    .modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.5);
+      z-index: 999;
+      display: none;
+    }
+
+    .modal-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      width: 300px;
+      height: 300px;
+      text-align: center;
+    }
+
+    .modal-content .name {
+      margin: 0 auto;
+      margin-bottom: 10px;
+      padding: 5px;
+      border-radius: 5px;
+      border: none;
+      width: 200px;
+      height: 50px;
+      text-align: center;
+      font-size: 30px;
+    }
+
+    .xuanzhe {
+      text-align: center;
+      justify-content: space-between;
+    }
+
+   .xuanzhe span {
+      font-size: 40px;
+      margin-left: 20px;
+      margin-right: 20px;
+    
+   }
+   
+  </style>
+</head>
+
+<body> 
+  <!-- 新增模态框 -->
+  <div class="modal">
+    <div class="modal-content">
+      <input type="text" placeholder="请输入名称" class="name"><br>
+      <div class="xuanzhe">
+        <span class="iconfont icon-erji"></span>
+        <span class="iconfont icon-shengyin1"></span>
+        <span class="iconfont icon-zhendong"></span>
+      </div>
+      <button class="confirm">确定</button>
+      <button class="cancel">取消</button>
+    </div>
+  </div>
+
+  <div class="mian">
+        <!-- 头部 -->
+        <div class="head">
+          <div class="logo">
+            水云闹钟
+          </div>
+          <div class="add">
+            +
+          </div>
+        </div>
+        <!-- 身体 -->
+        <div class="body">
+          <div class="item">
+            <!-- 上面 -->
+            <div class="center">
+              <div class="time">
+               11:11
+              </div>
+              <div class="erji">
+                <span class="iconfont icon-erji"></span>
+              </div>
+              <div class="waifang">
+                <span class="iconfont icon-shengyin1"></span>
+              </div>
+              <div class="zhengdong">
+                <span class="iconfont icon-zhendong"></span>
+              </div>
+              <div class="kaiguan">
+                开
+              </div>
+            </div>
+            <!-- 下面 -->
+            <div class="xiabiao">
+              <div class="name">
+                睡觉
+              </div>
+              <div class="data">
+                周一二三四五六
+              </div>
+            </div>
+          </div>
+ 
+
+        </div>
+        <!-- 底部 -->
+        <div class="foot">
+          <div class="naozhong">
+            <span class="iconfont icon-naozhong"></span>
+          </div>
+          <div class="miaobiao">
+            <span class="iconfont icon-miaobiao"></span>
+          </div>
+          <div class="dingshi">
+            <span class="iconfont icon-shalou"></span>
+          </div>
+        </div>
+  </div>
+  <script>
+
+    const add = document.querySelector('.add')
+    const modal = document.querySelector('.modal')
+
+    // 显示模态框
+    add.addEventListener('click',function(){
+      modal.style.display = 'block'
+    })
+
+    // 隐藏模态框
+    document.querySelector('.cancel').addEventListener('click', function() {
+      modal.style.display = 'none'
+    })
+    
+    // 确认按钮逻辑（需要自行补充添加闹钟的逻辑）
+    document.querySelector('.confirm').addEventListener('click', function() {
+      const time = document.querySelector('.alarm-time').value
+      // 这里添加创建新闹钟的逻辑
+      modal.style.display = 'none'
+    })
+  </script>
+</body>
+</html>
