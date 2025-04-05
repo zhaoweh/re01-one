@@ -1,8 +1,11 @@
 @font-face {
-  font-family: "iconfont"; /* Project id 4743112 */
-  src: url('iconfont.woff2?t=1742613374705') format('woff2'),
-       url('iconfont.woff?t=1742613374705') format('woff'),
-       url('iconfont.ttf?t=1742613374705') format('truetype');
+    font-family: 'iconfont';
+    src: url('https://zhaoweh.github.io/re01-one/iconfont.eot'); /* IE9*/
+    src: url('https://zhaoweh.github.io/re01-one/iconfont.eot?#iefix') format('embedded-opentype'), /* IE6 - IE8 */
+    url('https://zhaoweh.github.io/re01-one/iconfont.woff2') format('woff2'),
+    url('https://zhaoweh.github.io/re01-one/iconfont.woff') format('woff'),
+    url('https://zhaoweh.github.io/re01-one/iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url('https://zhaoweh.github.io/re01-one/iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
 }
 
 .iconfont {
